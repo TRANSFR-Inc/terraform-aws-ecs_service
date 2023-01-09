@@ -5,12 +5,14 @@ locals {
     sandbox = "shared-sandbox"
     dev     = "shared-dev"
     qa      = "shared-qa"
+    prod    = "shared-prod"
   }
 
   sd_by_env = {
     sandbox = "sandbox.tx.internal"
     dev     = "dev.tx.internal"
     qa      = "qa.tx.internal"
+    prod    = "prod.tx.internal"
   }
 
   legacy_vpc = "vpc-c86966a0"
@@ -18,6 +20,7 @@ locals {
     sandbox = local.legacy_vpc
     dev     = local.legacy_vpc
     qa      = local.legacy_vpc
+    prod    = local.legacy_vpc
   }
 
   legacy_private_subnets = [
@@ -29,6 +32,7 @@ locals {
     sandbox = local.legacy_private_subnets
     dev     = local.legacy_private_subnets
     qa      = local.legacy_private_subnets
+    prod    = local.legacy_private_subnets
   }
 
   auto_include_sg_ids = [
